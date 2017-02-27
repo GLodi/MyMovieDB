@@ -8,7 +8,7 @@ interface BaseContract {
 
     }
 
-    interface Presenter<V: View> {
+    interface Presenter<V: View?> {
 
         fun onAttach(view: V)
 

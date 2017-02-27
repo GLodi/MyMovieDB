@@ -1,7 +1,8 @@
-package giuliolodi.mymoviedb.data.network
+package giuliolodi.mymoviedb.data.api
 
 import dagger.Module
 import dagger.Provides
+import retrofit2.Retrofit
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -13,6 +14,9 @@ class ApiModule {
         return "http://api.themoviedb.org/"
     }
 
-
+    @Provides @Singleton
+    fun provideApi(retrofit: Retrofit): MovieDbApi {
+        return retrofit.create(MovieDbApi::class.java)
+    }
 
 }

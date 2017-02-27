@@ -1,5 +1,6 @@
 package giuliolodi.mymoviedb.ui.main
 
+import giuliolodi.mymoviedb.di.PerActivity
 import giuliolodi.mymoviedb.ui.base.BaseContract
 
 interface MainContract {
@@ -12,13 +13,14 @@ interface MainContract {
 
         fun showContent()
 
+        fun hideContent()
+
     }
 
-    interface Presenter<V: MainContract.View>: BaseContract.Presenter<V> {
+    @PerActivity
+    interface Presenter<V: MainContract.View>: BaseContract.Presenter<V?> {
 
         fun subscribe()
-
-        fun unsubscribe()
 
     }
 

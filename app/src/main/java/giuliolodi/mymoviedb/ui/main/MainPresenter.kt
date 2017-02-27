@@ -10,10 +10,6 @@ class MainPresenter<V: MainContract.View>: BasePresenter<V>, MainContract.Presen
     constructor(compositeDisposable: CompositeDisposable): super(compositeDisposable)
 
     override fun subscribe() {
-        getCompositeDisposable().add()
-    }
-
-    override fun unsubscribe() {
     }
 
 }
