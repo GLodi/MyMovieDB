@@ -1,11 +1,16 @@
 package giuliolodi.mymoviedb
 
 import android.app.Application
+import giuliolodi.mymoviedb.data.DataManager
 import giuliolodi.mymoviedb.di.component.AppComponent
 import giuliolodi.mymoviedb.di.component.DaggerAppComponent
 import giuliolodi.mymoviedb.di.module.AppModule
+import javax.inject.Inject
 
 class MyMovieDB : Application() {
+
+    @Inject
+    lateinit var mDataManager: DataManager
 
     lateinit var mAppComponent: AppComponent
 

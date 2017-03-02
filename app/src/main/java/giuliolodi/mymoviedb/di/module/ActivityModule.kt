@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import dagger.Module
 import dagger.Provides
+import giuliolodi.mymoviedb.di.ActivityContext
 import giuliolodi.mymoviedb.di.PerActivity
 import giuliolodi.mymoviedb.ui.main.MainContract
 import giuliolodi.mymoviedb.ui.main.MainPresenter
