@@ -1,18 +1,7 @@
 package giuliolodi.mymoviedb.data
 
-import android.content.Context
-import giuliolodi.mymoviedb.di.AppContext
-import javax.inject.Inject
-import javax.inject.Singleton
+interface DataManager {
 
-@Singleton
-class DataManager {
-
-    private val mContext: Context
-
-    @Inject
-    constructor(@AppContext context: Context) {
-        mContext = context
-    }
+    
 
 }
