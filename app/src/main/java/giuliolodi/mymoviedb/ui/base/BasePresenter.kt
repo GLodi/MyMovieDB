@@ -1,5 +1,6 @@
 package giuliolodi.mymoviedb.ui.base
 
+import giuliolodi.mymoviedb.data.DataManager
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
@@ -7,11 +8,14 @@ open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
 
     private val mCompositeDisposable: CompositeDisposable
 
+    private val mDataManager: DataManager
+
     private var mBaseView: V? = null
 
     @Inject
-    constructor(compositeDisposable: CompositeDisposable) {
+    constructor(compositeDisposable: CompositeDisposable, dataManager: DataManager) {
         this.mCompositeDisposable = compositeDisposable
+        this.mDataManager= dataManager
     }
 
     fun getCompositeDisposable(): CompositeDisposable {

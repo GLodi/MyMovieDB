@@ -13,7 +13,7 @@ import io.reactivex.disposables.CompositeDisposable
 @Module
 class ActivityModule(val activity: Activity) {
 
-    @Provides
+    @Provides @ActivityContext
     fun provideContext(): Context {
         return activity
     }
