@@ -18,6 +18,11 @@ class AppModule(private val application: Application) {
         return application
     }
 
+    @Provides
+    fun provideApplication(): Application {
+        return application
+    }
+
     @Provides @Singleton @Named("base_url")
     fun provideBaseUrl(): String {
         return "http://api.themoviedb.org/"

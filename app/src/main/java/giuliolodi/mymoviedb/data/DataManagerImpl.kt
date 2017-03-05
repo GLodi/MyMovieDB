@@ -17,12 +17,4 @@ class DataManagerImpl: DataManager {
         mContext = context
     }
 
-    override fun getData(): Observable<Response> {
-
-        var observable: Observable<Response> = Observable.create {  }
-
-        return observable
-
-    }
-
 }
