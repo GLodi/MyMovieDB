@@ -22,6 +22,10 @@ open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
         return mCompositeDisposable
     }
 
+    fun getDataManager(): DataManager {
+        return mDataManager
+    }
+
     override fun onAttach(view: V?) {
         this.mBaseView = view
     }

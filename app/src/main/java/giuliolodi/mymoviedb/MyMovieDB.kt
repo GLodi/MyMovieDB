@@ -9,9 +9,6 @@ import javax.inject.Inject
 
 class MyMovieDB : Application() {
 
-    @Inject
-    lateinit var mDataManager: DataManager
-
     lateinit var mAppComponent: AppComponent
 
     override fun onCreate() {
