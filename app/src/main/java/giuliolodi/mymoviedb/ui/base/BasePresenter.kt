@@ -14,8 +14,8 @@ open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
 
     @Inject
     constructor(compositeDisposable: CompositeDisposable, dataManager: DataManager) {
-        this.mCompositeDisposable = compositeDisposable
-        this.mDataManager= dataManager
+        mCompositeDisposable = compositeDisposable
+        mDataManager= dataManager
     }
 
     fun getCompositeDisposable(): CompositeDisposable {
@@ -27,7 +27,7 @@ open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
     }
 
     override fun onAttach(view: V?) {
-        this.mBaseView = view
+        mBaseView = view
     }
 
     override fun onDetach() {

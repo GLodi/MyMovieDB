@@ -1,5 +1,6 @@
 package giuliolodi.mymoviedb.di.component
 
+import android.app.Application
 import android.content.Context
 import dagger.Component
 import giuliolodi.mymoviedb.MyMovieDB
@@ -15,8 +16,10 @@ interface AppComponent {
     fun inject(app: MyMovieDB)
 
     @AppContext
-    fun getContext(): Context
+    fun context(): Context
 
-    fun getDataManager(): DataManager
+    fun application(): Application
+
+    fun dataManager(): DataManager
 
 }

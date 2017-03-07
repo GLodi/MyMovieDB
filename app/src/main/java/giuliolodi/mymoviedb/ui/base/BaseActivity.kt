@@ -9,7 +9,7 @@ import giuliolodi.mymoviedb.di.module.ActivityModule
 
 abstract class BaseActivity: AppCompatActivity(), BaseContract.View {
 
-    lateinit var mActivityComponent: ActivityComponent
+    private lateinit var mActivityComponent: ActivityComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

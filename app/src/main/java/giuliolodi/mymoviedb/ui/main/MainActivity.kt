@@ -1,6 +1,5 @@
 package giuliolodi.mymoviedb.ui.main
 
-import android.content.Context
 import android.os.Bundle
 import giuliolodi.mymoviedb.R
 import giuliolodi.mymoviedb.ui.base.BaseActivity
@@ -10,10 +9,6 @@ class MainActivity : BaseActivity(), MainContract.View {
 
     @Inject
     lateinit var mPresenter: MainContract.Presenter<MainContract.View>
-
-    @Inject
-    lateinit var mActivityContext: Context
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

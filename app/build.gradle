@@ -23,9 +23,6 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
-    packagingOptions {
-        exclude 'META-INF/rxjava.properties'
-    }
 }
 
 ext {
@@ -33,6 +30,9 @@ ext {
     dagger_version = '2.5'
 }
 
+kapt {
+    generateStubs = true
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -57,7 +57,7 @@ dependencies {
     // DI
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     compile "com.google.dagger:dagger:$dagger_version"
-    provided 'javax.annotation:jsr250-api:1.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
 
     // Test
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -67,5 +67,8 @@ dependencies {
 }
 repositories {
     mavenCentral()
+}
+buildscript {
+
 }
 
