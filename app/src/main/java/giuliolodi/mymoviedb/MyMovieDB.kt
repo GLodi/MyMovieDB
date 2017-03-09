@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class MyMovieDB : Application() {
 
-    private lateinit var mAppComponent: AppComponent
+    lateinit var mAppComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
