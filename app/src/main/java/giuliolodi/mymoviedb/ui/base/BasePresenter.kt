@@ -7,7 +7,6 @@ import javax.inject.Inject
 open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
 
     private val mCompositeDisposable: CompositeDisposable
-
     private val mDataManager: DataManager
 
     private var mBaseView: V? = null
