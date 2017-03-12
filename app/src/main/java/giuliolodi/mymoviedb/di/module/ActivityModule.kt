@@ -13,7 +13,8 @@ import io.reactivex.disposables.CompositeDisposable
 @Module
 class ActivityModule(val activity: Activity) {
 
-    @Provides @ActivityContext
+    @Provides
+    @ActivityContext
     fun provideContext(): Context {
         return activity
     }
@@ -28,7 +29,8 @@ class ActivityModule(val activity: Activity) {
         return CompositeDisposable()
     }
 
-    @Provides @PerActivity
+    @Provides
+    @PerActivity
     fun provideMainPresenter(presenter: MainPresenter<MainContract.View>): MainContract.Presenter<MainContract.View> {
         return presenter
     }
