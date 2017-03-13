@@ -6,6 +6,8 @@ import dagger.Module
 import dagger.Provides
 import giuliolodi.mymoviedb.data.DataManager
 import giuliolodi.mymoviedb.data.DataManagerImpl
+import giuliolodi.mymoviedb.data.network.ApiHelper
+import giuliolodi.mymoviedb.data.network.ApiHelperImpl
 import giuliolodi.mymoviedb.di.AppContext
 import javax.inject.Singleton
 
@@ -26,6 +28,12 @@ class AppModule(private val application: Application) {
     @Singleton
     fun provideDataManager(dataManagerImpl: DataManagerImpl): DataManager {
         return dataManagerImpl
+    }
+
+    @Provides
+    @Singleton
+    fun provideApiHelper(apiHelperImpl: ApiHelperImpl): ApiHelper {
+        return apiHelperImpl
     }
 
 }

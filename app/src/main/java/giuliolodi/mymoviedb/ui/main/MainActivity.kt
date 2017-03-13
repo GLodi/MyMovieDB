@@ -16,6 +16,7 @@ class MainActivity : BaseActivity(), MainContract.View {
 
         getActivityComponent().inject(this)
 
+        mPresenter.subscribe()
     }
 
     override fun setLoading() {

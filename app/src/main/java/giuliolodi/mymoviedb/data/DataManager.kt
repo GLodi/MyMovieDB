@@ -1,6 +1,8 @@
 package giuliolodi.mymoviedb.data
 
-interface DataManager {
+import giuliolodi.mymoviedb.data.network.ApiHelper
+
+interface DataManager: ApiHelper {
 
 
 
