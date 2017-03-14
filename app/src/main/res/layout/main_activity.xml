@@ -8,14 +8,12 @@
     android:layout_height="match_parent"
     tools:context="giuliolodi.mymoviedb.ui.main.MainActivity">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="@+id/main_activity"
-        app:layout_constraintLeft_toLeftOf="@+id/main_activity"
-        app:layout_constraintRight_toRightOf="@+id/main_activity"
-        app:layout_constraintTop_toTopOf="@+id/main_activity" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_activity_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        tools:visibility="visible"/>
 
 </android.support.constraint.ConstraintLayout>

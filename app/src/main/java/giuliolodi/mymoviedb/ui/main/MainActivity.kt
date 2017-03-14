@@ -16,10 +16,18 @@ class MainActivity : BaseActivity(), MainContract.View {
 
         getActivityComponent().inject(this)
 
+        initLayout()
+
+        mPresenter.onAttach(this)
+
         mPresenter.subscribe()
     }
 
-    override fun setLoading() {
+    private fun initLayout() {
+
+    }
+
+    override fun showLoading() {
     }
 
     override fun hideLoading() {
@@ -28,9 +36,9 @@ class MainActivity : BaseActivity(), MainContract.View {
     override fun showContent() {
     }
 
-    override fun isNetworkAvailable() {
+    override fun onDestroy() {
+        mPresenter.onDetach()
+        super.onDestroy()
     }
 
-    override fun hideContent() {
-    }
 }

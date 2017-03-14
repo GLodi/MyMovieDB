@@ -4,7 +4,7 @@ import giuliolodi.mymoviedb.data.DataManager
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
-open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
+open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V> {
 
     private val mCompositeDisposable: CompositeDisposable
     private val mDataManager: DataManager
@@ -25,7 +25,7 @@ open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
         return mDataManager
     }
 
-    override fun onAttach(view: V?) {
+    override fun onAttach(view: V) {
         mBaseView = view
     }
 
@@ -38,8 +38,8 @@ open class BasePresenter<V: BaseContract.View>: BaseContract.Presenter<V?> {
         return mBaseView != null
     }
 
-    fun getView(): V? {
-        return mBaseView
+    fun getView(): V {
+        return mBaseView!!
     }
 
 }

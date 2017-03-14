@@ -7,18 +7,16 @@ interface MainContract {
 
     interface View: BaseContract.View {
 
-        fun setLoading()
+        fun showLoading()
 
         fun hideLoading()
 
         fun showContent()
 
-        fun hideContent()
-
     }
 
     @PerActivity
-    interface Presenter<V: MainContract.View>: BaseContract.Presenter<V?> {
+    interface Presenter<V: MainContract.View>: BaseContract.Presenter<V> {
 
         fun subscribe()
 

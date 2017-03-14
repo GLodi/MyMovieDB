@@ -4,11 +4,11 @@ interface BaseContract {
 
     interface View {
 
-        fun isNetworkAvailable()
+
 
     }
 
-    interface Presenter<V: View?> {
+    interface Presenter<V: View> {
 
         fun onAttach(view: V)
 
