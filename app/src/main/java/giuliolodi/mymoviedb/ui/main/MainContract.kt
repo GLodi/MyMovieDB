@@ -1,5 +1,6 @@
 package giuliolodi.mymoviedb.ui.main
 
+import giuliolodi.mymoviedb.data.network.model.Movie
 import giuliolodi.mymoviedb.di.PerActivity
 import giuliolodi.mymoviedb.ui.base.BaseContract
 
@@ -11,7 +12,7 @@ interface MainContract {
 
         fun hideLoading()
 
-        fun showContent()
+        fun showContent(movies: List<Movie>)
 
     }
 

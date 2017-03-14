@@ -54,6 +54,9 @@ dependencies {
     compile 'com.amitshekhar.android:rx2-android-networking:0.0.1'
     compile "com.google.code.gson:gson:2.8.0"
 
+    // Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
     // DI
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     compile "com.google.dagger:dagger:$dagger_version"

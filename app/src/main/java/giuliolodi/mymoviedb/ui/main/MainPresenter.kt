@@ -30,10 +30,11 @@ class MainPresenter<V: MainContract.View>: BasePresenter<V>, MainContract.Presen
 
     fun onSuccess(discoverMovieResult: DiscoverMovieResult) {
         Log.d(TAG, "Results taken")
+        getView().showContent(discoverMovieResult.results)
     }
 
     fun onError(throwable: Throwable) {
-        Log.d(TAG, "Error")
+        Log.d(TAG, "Error", throwable)
     }
 
 }

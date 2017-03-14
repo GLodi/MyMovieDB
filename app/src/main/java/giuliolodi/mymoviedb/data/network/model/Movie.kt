@@ -26,4 +26,10 @@ data class Movie(
 
         @Expose
         @SerializedName("vote_average")
-        val voteAverage: Double)
+        val voteAverage: Double) {
+
+    fun getPosterUrl(): String {
+        return "http://image.tmdb.org/t/p/w185/" + posterPath
+    }
+
+}
