@@ -29,7 +29,7 @@ data class Movie(
         val voteAverage: Double) {
 
     fun getPosterUrl(): String {
-        return "http://image.tmdb.org/t/p/w185/" + posterPath
+        return "http://image.tmdb.org/t/p/w300/" + posterPath
     }
 
 }
